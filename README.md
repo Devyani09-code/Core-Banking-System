@@ -26,4 +26,4 @@ deposit or viewing the transactions.
 is carried forward making neccessary changes.
 6.The user can terminate the account if required by clicking on the 'terminate' button provided.
 
-Below are some images of the project:
+Some images of the project have been added to the repositary.
