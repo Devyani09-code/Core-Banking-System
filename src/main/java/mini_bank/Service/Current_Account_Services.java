@@ -20,6 +20,7 @@ public Current_Account CAcreate_acc(Current_Account ca) {
 }
 
 //withdraw
+@Transactional
 public int CAwithdraw(Long account_number, Integer sum) {
 	return car.findById(account_number).map(sa -> {
 		sa.setBalance(sa.withdraw(sa.getSum(), sa.getBalance()));
@@ -29,6 +30,7 @@ public int CAwithdraw(Long account_number, Integer sum) {
 }
 
 //deposit
+@Transactional
 public int CAdeposit(Long account_number, Integer sum) {
 	return car.findById(account_number).map(sa -> {
 		sa.setBalance(sa.deposit(sum, sa.getBalance()));
