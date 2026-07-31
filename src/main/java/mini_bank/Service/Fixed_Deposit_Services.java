@@ -30,6 +30,7 @@ public class Fixed_Deposit_Services {
 	}
 	
 	//delete account and claim value
+	@Transactional
 	public int closeFD(Long account_number) {
 	    return fdr.findById(account_number).map(fda -> {
 	        int amount = fda.getBalance();
