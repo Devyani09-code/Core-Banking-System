@@ -6,6 +6,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @EnableScheduling
 @SpringBootApplication
+@EnableAsync
 public class MiniBankApplication {
 
 	public static void main(String[] args) {
