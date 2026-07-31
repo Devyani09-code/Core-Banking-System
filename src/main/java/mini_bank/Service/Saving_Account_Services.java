@@ -19,6 +19,7 @@ public Savings_Account SAcreate_acc(Savings_Account sa) {
 }
 
 //withdraw
+@Transactional
 public int SAwithdraw(Long account_number,Integer sum) {
 	return sar.findById(account_number).map(sa->{
 		sa.setBalance(sa.withdraw(sa.getSum(),sa.getBalance()));
@@ -28,6 +29,7 @@ public int SAwithdraw(Long account_number,Integer sum) {
 }
 
 //deposit
+@Transactional
 public int SAdeposit(Long account_number,Integer sum) {
 	return sar.findById(account_number).map(sa->{
 		sa.setBalance(sa.deposit(sum,sa.getBalance()));
